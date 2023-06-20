@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodingChallenge.Data.MiRefactor.Visitor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenge.Data.MiRefactor
 {
-    public class TrianguloEquilatero : IFormaGeometrica
+    public class TrianguloEquilatero : AbstractFormaGeometrica
     {
         private readonly decimal _lado;
 
@@ -15,12 +16,18 @@ namespace CodingChallenge.Data.MiRefactor
             _lado = lado;
         }
 
-        public decimal CalcularArea()
+        public override void Contar(IFormaGeometricaVisitor visitor)
+        {
+            visitor.Visitar(this);
+
+        }
+
+        public override decimal CalcularArea()
         {
             return ((decimal)Math.Sqrt(3) / 4) * _lado * _lado;
         }
 
-        public decimal CalcularPerimetro()
+        public override decimal CalcularPerimetro()
         {
             return _lado * 3;
         }

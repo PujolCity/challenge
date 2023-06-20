@@ -58,7 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\FormaGeometrica.cs" />
-    <Compile Include="MiRefactor\IFormaGeometrica.cs" />
+    <Compile Include="MiRefactor\FormasGeometricas\Circulo.cs" />
+    <Compile Include="MiRefactor\FormasGeometricas\Cuadrado.cs" />
+    <Compile Include="MiRefactor\FormasGeometricas\AbstractFormaGeometrica.cs" />
+    <Compile Include="MiRefactor\FormasGeometricas\Rectangulo.cs" />
+    <Compile Include="MiRefactor\Reporte\DeutscherBericht.cs" />
+    <Compile Include="MiRefactor\Reporte\EnglishReport.cs" />
+    <Compile Include="MiRefactor\Reporte\Reporte.cs" />
+    <Compile Include="MiRefactor\Reporte\ReporteCastellano.cs" />
+    <Compile Include="MiRefactor\FormasGeometricas\Trapecio.cs" />
+    <Compile Include="MiRefactor\FormasGeometricas\TrianguloEquilatero.cs" />
+    <Compile Include="MiRefactor\Visitor\ContadorFormasVisitor.cs" />
+    <Compile Include="MiRefactor\Visitor\IFormaGeometricaVisitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
